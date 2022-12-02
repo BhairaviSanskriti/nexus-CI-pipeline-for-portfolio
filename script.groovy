@@ -5,13 +5,13 @@ def buildApp(){
 
 def pushImage(){
     echo 'Building Image ...'
-    sh "docker build -t <ipAddress>:<portNoDockerHostedRepo>/<imageName>:${BUILD_NUMBER} ."
+    sh "docker build -t 64.227.128.95:8082/sanskriti-portfolio:${BUILD_NUMBER} ."
 
     echo 'Pushing image to docker hosted rerpository on Nexus'
 
     withCredentials([usernamePassword(credentialsId: 'nexus', passwordVariable: 'PSW', usernameVariable: 'USER')]){
-        sh "echo ${PSW} | docker login -u ${USER} --password-stdin <ipAddress>/<portNoDockerHostedRepo>"
-        sh "docker push <ipAddress>:<portNoDockerHostedRepo>/<imageName>:${BUILD_NUMBER}"
+        sh "echo ${PSW} | docker login -u ${USER} --password-stdin 64.227.128.95:8082"
+        sh "docker push 64.227.128.95:8082/sanskriti-portfolio:${BUILD_NUMBER}"
     }
 }
 
