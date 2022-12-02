@@ -27,8 +27,8 @@ def commitChanges(){
         withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'PSW', usernameVariable: 'USER')]) {
         sh 'git config --global user.name "jenkins"'
         sh 'git config --global user.email "my.jenkins.server@gmail.com"'
-        sh "git remote set-url origin https://${USER}:${PSW}@github.com/BhairaviSanskriti/nexus-jenkins-my-portfolio.git"
-        
+        sh "git remote set-url origin https://${USER}:${PSW}@github.com/BhairaviSanskriti/nexus-CI-pipeline-for-portfolio.git"
+
         sh '''
             #!/bin/bash
             sed -i 's/Version:.*/Version: '"${BUILD_NUMBER}"'/g' index.html
