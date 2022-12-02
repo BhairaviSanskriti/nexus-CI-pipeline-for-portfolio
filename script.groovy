@@ -19,6 +19,10 @@ def testApp(){
     echo 'Testing Application ...'
 }
 
+def deployApp(){
+    echo 'Deploying Application ...'
+}
+
 def commitChanges(){
         withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'PSW', usernameVariable: 'USER')]) {
         sh 'git config --global user.name "jenkins"'
