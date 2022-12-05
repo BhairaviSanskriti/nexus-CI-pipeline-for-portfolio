@@ -78,7 +78,7 @@ Create a user. Assign this user the role that you just created.
 ### Github Webhooks
 - Ad webhook in github
 - `<ipAddressOfHostServer>:<portNoOfJenkins>/github-webhook/` 
-	- E.g.-> `143.110.184.204:8082/github-webhook/` 
+	- E.g.-> `143.110.184.204:8080/github-webhook/` 
 			
 ### Jenkins
 - Add GitHub SCM trigger
