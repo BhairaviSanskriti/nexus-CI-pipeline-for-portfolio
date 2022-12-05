@@ -8,7 +8,7 @@ Read this [blog](https://bhairavisanskriti.hashnode.dev/publish-docker-image-to-
 ## OS
 - use any Ubuntu version for the host server machine.
 
-## Firewall config of droplet:
+## Firewall config of nexus-server droplet:
 - port `22`  : ssh - add only your device's ip address
 - port `8081`: nexus - this is where your nexus application will run
 - port `8082`: docker repo - this is the IP add of the docker(hosted by Nexus) where we will store images
@@ -26,6 +26,10 @@ Read this [blog](https://bhairavisanskriti.hashnode.dev/publish-docker-image-to-
 ## Run Nexus container:
 - `docker volume create --name nexus-data`
 - `docker run -d -p 8081:8081 -p 8082:8082 --name nexus -v nexus-data:/nexus-data sonatype/nexus3`
+
+## Firewall config of jenkins-server droplet:
+- port `22`  : ssh - add only your device's ip address
+- port `8080`: jenkins - this is where your jenkins application will run
 
 ## Create Blob Store
 Create a storage where all the components of your docker repository will be stored.
