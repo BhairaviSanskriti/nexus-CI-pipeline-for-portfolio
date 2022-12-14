@@ -3,7 +3,7 @@ This repository contains code for my portfolio web pplication.
 
 This projects builds a Jenkins CI pipeline. Every time I commit changes to this repository. Jenkins will build the docker image of my web application, push it to a docker repository that is being hosted on Sonatype Nexus, and update the version of the web application in the GitHub.
 
-Read this [blog](https://bhairavisanskriti.hashnode.dev/publish-docker-image-to-nexus-using-jenkins) for a better understanding of this project.
+Read this [blog](https://bhairavisanskriti.hashnode.dev/publish-docker-images-to-nexus-using-jenkins) for a better understanding of this project.
 
 ## OS
 - use any Ubuntu version for the host server machine.
